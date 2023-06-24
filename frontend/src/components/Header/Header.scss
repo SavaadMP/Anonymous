@@ -1,0 +1,52 @@
+header {
+  z-index: 90;
+  width: 90%;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  position: fixed;
+  top: 22px;
+  bottom: auto;
+  left: 0%;
+  right: 0%;
+  padding: 10px 50px;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .brand_logo {
+    a {
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 22px;
+    }
+  }
+
+  .getStarted {
+    margin: 10px;
+
+    a {
+      background: black;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: 2px solid black;
+      transition: all 0.3s ease-in-out;
+      font-weight: bold;
+      letter-spacing: 1px;
+
+      &:hover {
+        border: 2px solid white;
+      }
+    }
+  }
+}
