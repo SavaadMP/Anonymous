@@ -60,17 +60,28 @@ const Register = () => {
             </div>
             <div className="form-group">
               <label htmlFor="randomId" className="uniqueId">
-                Unique ID:{" "}
+                Unique ID & Profile Type:{" "}
                 <span onClick={showUniqueIdInfo}>
                   <i className="bx bx-info-circle"></i>
                 </span>
               </label>
-              <input
-                type="text"
-                placeholder="eg: JD2023"
-                name="randomId"
-                id="randomId"
-              />
+              <div className="group-row">
+                <input
+                  type="text"
+                  placeholder="eg: JD2023"
+                  name="randomId"
+                  id="randomId"
+                />
+
+                <select
+                  name="profileType"
+                  id="profileType"
+                  className="profileType"
+                >
+                  <option value="public">Public</option>
+                  <option value="private">Private</option>
+                </select>
+              </div>
             </div>
             <div className="form-group submit_btn">
               <label>

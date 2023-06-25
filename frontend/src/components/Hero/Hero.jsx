@@ -10,7 +10,7 @@ const Hero = () => {
     );
 
     if (response == true) {
-      navigate("/register");
+      navigate("/");
     } else {
       return null;
     }

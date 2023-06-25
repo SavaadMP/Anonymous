@@ -3,6 +3,7 @@ import Home from "./pages/Home/Home";
 import Header from "./components/Header/Header";
 import Register from "./pages/Auth/Register";
 import Login from "./pages/Auth/Login";
+import Welcome from "./pages/Welcome/Welcome";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route index path="/" element={<Home />} />
+        <Route path="/welcome" element={<Welcome />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>

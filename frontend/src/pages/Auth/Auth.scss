@@ -134,7 +134,7 @@
           }
 
           input {
-            margin-top: 5px;
+            // margin-top: 5px;
             padding: 10px 20px;
             border-radius: 5px;
             outline: none;
@@ -150,5 +150,23 @@
         }
       }
     }
+  }
+}
+
+.group-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  select {
+    margin: 0 0 0 10px;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    background: #323035;
+    border: none;
+    color: white;
+    cursor: pointer;
   }
 }
