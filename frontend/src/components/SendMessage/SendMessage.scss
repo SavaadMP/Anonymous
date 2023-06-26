@@ -1,0 +1,46 @@
+.send_message {
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+
+  form {
+    .input-group {
+      display: flex;
+      flex-direction: column;
+
+      input, textarea, button {
+        padding: 10px 30px;
+        margin-bottom: 20px;
+        background: #1d1c20;
+        border: 2px solid #1d1c20;
+        border-radius: 5px;
+        color: white;
+
+        &:focus {
+          border: 2px solid #ababab;
+        }
+      }
+
+      button {
+        margin-bottom: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          border: 2px solid #ababab;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .send_message {
+    width: 300px;
+  }
+}

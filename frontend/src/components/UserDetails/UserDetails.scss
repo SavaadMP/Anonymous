@@ -1,0 +1,111 @@
+.user_details {
+  width: 100%;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  height: 400px;
+  position: relative;
+  margin: 15px;
+
+  h3 {
+    letter-spacing: 1px;
+  }
+
+  p {
+    color: #ababab;
+    margin-bottom: 20px;
+  }
+
+  h5 {
+    letter-spacing: 1px;
+    font-weight: 500;
+    display: flex;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    margin-top: 10%;
+
+    button {
+      cursor: pointer;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 10px 0;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+      border: 2px solid #373737;
+      background: #373737;
+      color: #ababab;
+      letter-spacing: 1px;
+
+      &:hover {
+        border: 2px solid #ababab;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .user_details {
+    width: 300px;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    height: 400px;
+    position: relative;
+
+    h3 {
+      letter-spacing: 1px;
+    }
+
+    p {
+      color: #ababab;
+      margin-bottom: 20px;
+    }
+
+    h5 {
+      letter-spacing: 1px;
+      font-weight: 500;
+      display: flex;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      margin-top: 10%;
+
+      button {
+        cursor: pointer;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 10px 0;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+        border: 2px solid #373737;
+        background: #373737;
+        color: #ababab;
+        letter-spacing: 1px;
+
+        &:hover {
+          border: 2px solid #ababab;
+        }
+      }
+    }
+  }
+}
+
