@@ -35,3 +35,31 @@
     font-size: 18px;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .faq_group {
+    width: 300px;
+
+    .faq_qns {
+      padding: 10px 20px;
+      letter-spacing: 1px;
+
+      h2 {
+        font-weight: normal;
+        text-transform: capitalize;
+        font-size: 18px;
+      }
+
+      h1 {
+        cursor: pointer;
+      }
+    }
+
+    .faq_ans {
+      background: #1d1c20;
+      padding: 20px 30px;
+      letter-spacing: 1px;
+      font-size: 18px;
+    }
+  }
+}

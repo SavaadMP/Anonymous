@@ -1,4 +1,5 @@
 import "./Home.scss";
+import Message from "../../components/Message/Message.jsx";
 
 const Home = () => {
     function changeUserID() {
@@ -21,6 +22,8 @@ const Home = () => {
                     </div>
                 </div>
 
+
+
                 <div className="send_message">
                     <form>
                         <div className="input-group">
@@ -30,6 +33,22 @@ const Home = () => {
                             <button>Send Message</button>
                         </div>
                     </form>
+                </div>
+            </div>
+
+            <div className="view_messages">
+                <div className="messages">
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
                 </div>
             </div>
         </div>

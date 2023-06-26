@@ -42,3 +42,43 @@
     }
   }
 }
+
+
+@media screen and (max-width: 920px){
+  .about_section {
+    padding: 20px;
+
+    .about_content {
+      flex-direction: column;
+
+      .left {
+        img {
+          width: 300px;
+        }
+      }
+
+      .right {
+        p {
+          line-height: 30px;
+          font-size: 15px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 400px){
+  .about_section {
+    .about_content {
+      .right {
+        p {
+          font-size: 10px;
+          line-height: 20px;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

@@ -6,3 +6,11 @@
     color: white;
   }
 }
+
+@media screen and (max-width: 900px){
+  .section_heading {
+    h1 {
+      font-size: 18px;
+    }
+  }
+}

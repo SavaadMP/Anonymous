@@ -50,3 +50,26 @@ header {
     }
   }
 }
+
+@media screen and (max-width: 500px){
+  header {
+    justify-content: space-between;
+    .brand_logo {
+      a {
+        font-size: 12px;
+      }
+    }
+
+    .getStarted {
+      margin: 3px;
+
+      a {
+        display: flex;
+        align-items: center;
+        padding: 5px 15px;
+        font-size: 10px;
+        font-weight: normal;
+      }
+    }
+  }
+}

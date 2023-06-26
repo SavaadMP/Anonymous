@@ -54,3 +54,55 @@
     }
   }
 }
+
+@media screen and (max-width: 620px){
+  .hero_container {
+    .hero_content {
+      width: 400px;
+
+      h1 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .btn-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .btn {
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 400px){
+  .hero_container {
+    .hero_content {
+      width: 300px;
+
+      h1 {
+        font-size: 15px;
+      }
+
+      p {
+        font-size: 10px;
+      }
+
+      .btn-group {
+        .btn {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+}

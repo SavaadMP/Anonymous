@@ -16,3 +16,12 @@ footer {
     border-radius: 10px;
   }
 }
+
+@media screen  and (max-width: 540px){
+  footer {
+    p {
+      padding: 10px 20px;
+      font-size: 15px;
+    }
+  }
+}

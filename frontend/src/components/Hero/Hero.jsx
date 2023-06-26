@@ -1,22 +1,7 @@
 import "./Hero.scss";
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const Hero = () => {
-    const navigate = useNavigate();
-
-    // * Give enough information to the users
-    function guestAlert() {
-        const response = confirm(
-            "If you are login as guest!!, you won't get reply from anyone you message"
-        );
-
-        if (response == true) {
-            navigate("/");
-        } else {
-            return null;
-        }
-    }
-
     return (
         <>
             <section className="hero_container">
@@ -36,9 +21,9 @@ const Hero = () => {
                         <Link className="btn" to="/login">
                             Login
                         </Link>
-                        <button onClick={guestAlert} className="btn">
-                            Login as Guest
-                        </button>
+                        <Link to="/sendMessage" className="btn">
+                            Send Message
+                        </Link>
                     </div>
                 </div>
             </section>

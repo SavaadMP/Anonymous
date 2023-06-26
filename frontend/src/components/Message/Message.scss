@@ -1,0 +1,37 @@
+.message {
+  padding: 10px;
+  color: #ababab;
+  background: #1D1C20;
+  margin: 10px;
+  border-radius: 10px;
+
+  p {
+    margin-bottom: 2px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .more_options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    button {
+      width: 100%;
+      margin: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 2px solid #373737;
+      background: #373737;
+      color: #ababab;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        border: 2px solid #ababab;
+      }
+    }
+  }
+}
