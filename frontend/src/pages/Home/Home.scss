@@ -44,3 +44,22 @@
     }
   }
 }
+
+@media screen and (max-width: 480px){
+  .main_container {
+    .view_messages {
+      width: 100%;
+
+      .messages {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px;
+        grid-gap: 10px;
+      }
+    }
+
+    .main_content {
+      flex-direction: column;
+    }
+  }
+}
