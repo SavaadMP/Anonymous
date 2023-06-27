@@ -11,21 +11,21 @@ const Home = () => {
                 <SendMessage />
             </div>
 
-            {/*<div className="view_messages">*/}
-            {/*    <div className="messages">*/}
-            {/*        <Message />*/}
-            {/*        <Message />*/}
-            {/*        <Message />*/}
-            {/*        <Message />*/}
-            {/*        <Message />*/}
-            {/*        <Message />*/}
-            {/*        <Message />*/}
-            {/*        <Message />*/}
-            {/*        <Message />*/}
-            {/*        <Message />*/}
-            {/*        <Message />*/}
-            {/*    </div>*/}
-            {/*</div>*/}
+            <div className="view_messages">
+                <div className="messages">
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
+                    <Message />
+                </div>
+            </div>
         </div>
     )
 };
