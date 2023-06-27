@@ -75,3 +75,24 @@
     }
   }
 }
+
+@media screen and (max-width: 400px){
+  .message {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+
+    p {
+      border-radius: 5px;
+      font-size: 10px;
+      line-height: 20px;
+    }
+
+    .more_options {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}

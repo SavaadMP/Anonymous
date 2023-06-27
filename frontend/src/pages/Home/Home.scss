@@ -1,6 +1,10 @@
 .main_container {
   padding: 80px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   .view_messages {
     border-radius: 5px;
@@ -9,6 +13,8 @@
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.08);
     width: 100%;
+    display: flex;
+    align-items: center !important;
 
     .messages {
       display: grid;
@@ -24,13 +30,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px) {
   .main_container {
+    //padding: 50px;
+
     .view_messages {
       width: 100%;
+      align-items: center;
 
       .messages {
         display: grid;
@@ -45,10 +55,11 @@
   }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
   .main_container {
+    padding: 90px;
     .view_messages {
-      width: 100%;
+      width: 300px;
 
       .messages {
         display: grid;
