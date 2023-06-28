@@ -12,12 +12,25 @@ const RegisterUser = async (req, res) => {
 
   try {
     const user = await User.signup(username, email, password, usercode);
-    const { username, email, usercode } = user;
     const token = createToken(user._id);
     res.status(200).json({ username, email, usercode, token });
   } catch (error) {
-    res.status(200).json({ error: error.message });
+    res.status(404).json({ error: error.message });
   }
 };
 
-module.exports = { RegisterUser };
+const LoginUser = async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const user = await User.login(email, password);
+    const token = createToken(user._id);
+    res
+      .status(200)
+      .json({ email, token, username: user.username, usercode: user.usercode });
+  } catch (error) {
+    res.status(404).json({ error: error.message });
+  }
+};
+
+module.exports = { RegisterUser, LoginUser };

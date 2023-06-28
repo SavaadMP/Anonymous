@@ -31,6 +31,7 @@ userSchema.statics.signup = async function (
   password,
   usercode
 ) {
+  console.log({ username, email, password, usercode });
   if (!username || !email || !password || !usercode) {
     throw Error("all fields must be entered!!");
   }
@@ -42,10 +43,8 @@ userSchema.statics.signup = async function (
     throw Error("enter a strong password!!");
   }
 
-  const existingUser = await this.findOne({ email });
-  if (existingUser) {
-    throw Error("email already in use!!");
-  }
+  const existEmail = await this.findOne({ email });
+  if (existEmail) throw Error("email already in use!!");
 
   const salt = await bcrypt.genSalt(10);
   const hashedPassword = await bcrypt.hash(password, salt);
@@ -57,6 +56,18 @@ userSchema.statics.signup = async function (
     password: hashedPassword,
     usercode,
   });
+
+  return user;
+};
+
+userSchema.statics.login = async function (email, password) {
+  if (!email || !password) throw Error("All Feilds must be filled!!");
+
+  const user = await this.findOne({ email: email });
+  if (!user) throw Error("Incorrect Email!!");
+
+  const matchPassword = await bcrypt.compare(password, user.password);
+  if (!matchPassword) throw Error("Incorrect Password!!");
 
   return user;
 };
