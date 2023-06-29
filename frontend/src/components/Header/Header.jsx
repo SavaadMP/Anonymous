@@ -6,19 +6,19 @@ import { useLogout } from "../../hooks/useLogout";
 const Header = () => {
   const { logout } = useLogout();
   const { user } = useSelector((state) => state.user);
-  const logoutAcc = async () => {
+  const logoutAcc = () => {
     logout();
   };
 
   return (
     <header>
       <div className="brand_logo">
-        <Link to="/welcome">🎭 Anonymous</Link>
+        <Link to="/">🎭 Anonymous</Link>
       </div>
 
       <div className="getStarted">
         {user ? (
-          <Link onClick={logoutAcc} to="/login">
+          <Link onClick={logoutAcc} to="/welcome">
             Logout
           </Link>
         ) : (

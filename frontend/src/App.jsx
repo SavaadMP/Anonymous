@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "./redux/user";
 
 import Home from "./pages/Home/Home";
@@ -11,6 +11,7 @@ import Welcome from "./pages/Welcome/Welcome";
 import SendMessage from "./pages/SendMessage/SendMessage.jsx";
 
 const App = () => {
+  const { user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -28,12 +29,25 @@ const App = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route index path="/" element={<Home />} />
-        <Route path="/welcome" element={<Welcome />} />
+        <Route
+          index
+          path="/"
+          element={user ? <Home /> : <Navigate to="/welcome" />}
+        />
+        <Route
+          path="/welcome"
+          element={!user ? <Welcome /> : <Navigate to="/" />}
+        />
         <Route path="/sendMessage" element={<SendMessage />} />
 
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/register"
+          element={!user ? <Register /> : <Navigate to="/" />}
+        />
+        <Route
+          path="/login"
+          element={!user ? <Login /> : <Navigate to="/" />}
+        />
       </Routes>
     </BrowserRouter>
   );

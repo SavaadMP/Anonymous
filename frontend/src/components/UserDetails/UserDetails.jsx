@@ -1,20 +1,28 @@
-import "./UserDetails.scss"
+import { useLogout } from "../../hooks/useLogout";
+import { useSelector } from "react-redux";
+import "./UserDetails.scss";
 
 const UserDetails = () => {
-    return (
-        <div className="user_details">
-            <h3>John Doe</h3>
-            <p>johndoe@gmail.com</p>
+  const { logout } = useLogout();
+  const { user } = useSelector((state) => state.user);
+  const logoutAcc = () => {
+    logout();
+  };
 
-            <h5>User ID: SM@2023</h5>
+  return (
+    <div className="user_details">
+      <h3>{user.username}</h3>
+      <p>{user.email}</p>
 
-            <div className="buttons">
-                <button>Change User ID</button>
-                <button>Change Username</button>
-                <button>Logout</button>
-            </div>
-        </div>
-    )
-}
+      <h5>User ID: {user.usercode}</h5>
 
-export default UserDetails
+      <div className="buttons">
+        <button>Change User ID</button>
+        <button>Change Username</button>
+        <button onClick={logoutAcc}>Logout</button>
+      </div>
+    </div>
+  );
+};
+
+export default UserDetails;
