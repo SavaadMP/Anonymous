@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useRegister } from "../../hooks/useRegister";
-import Error from "../Error/Error";
 
 const RegisterForm = ({ brandInfo }) => {
   const [username, setUsername] = useState("");

@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { loginUser } from "./redux/user";
+
 import Home from "./pages/Home/Home";
 import Header from "./components/Header/Header";
 import Register from "./pages/Auth/Register";
@@ -8,10 +11,14 @@ import Welcome from "./pages/Welcome/Welcome";
 import SendMessage from "./pages/SendMessage/SendMessage.jsx";
 
 const App = () => {
+  const dispatch = useDispatch();
+
   useEffect(() => {
     const fetchUser = async () => {
       const userDocs = await JSON.parse(localStorage.getItem("Anonymous"));
-      console.log(userDocs);
+      if (userDocs) {
+        dispatch(loginUser(userDocs));
+      }
     };
 
     fetchUser();
